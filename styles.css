@@ -1,0 +1,232 @@
+:root {
+  /* Colors */
+  --blue-400: hsl(183 62% 54%);
+  --blue-600: hsl(185 75% 39%);
+  --gray-100: hsl(225 10% 92%);
+  --gray-500: hsl(227 10% 46%);
+  --navy-950: hsl(229 23% 23%);
+  --white: hsl(0 0% 100%);
+
+  /* Spacing */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.25rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+
+  /* Typography */
+  --font-base: 'Kumbh Sans', sans-serif;
+  --leading-standard: 1.25;
+  --text-1-bold: 700 1.125rem/1.25 var(--font-base);
+  --text-1: 400 1.125rem/1.25 var(--font-base);
+  --text-2: 400 0.875rem/1.25 var(--font-base);
+  --text-3: 400 0.625rem/1.25 var(--font-base);
+}
+
+/* CSS Reset/Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+/* Screen reader styles */
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  height: 0.0625rem;
+  margin: calc(0.0625rem * -1);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.0625rem;
+}
+
+body {
+  font-family: var(--font-base);
+  min-height: 100vh;
+}
+
+.multi-bg {
+  background-color: var(--blue-600);
+  background-image:
+    url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-position:
+    top -20rem right 10rem,
+    top 24rem left 10rem;
+  background-repeat: no-repeat, no-repeat;
+  background-size:
+    38.875rem 38.8125rem,
+    38.875rem 38.8125rem;
+  overflow: hidden;
+}
+
+main {
+  margin: auto;
+  padding-inline: var(--spacing-300);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3rem;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--white);
+  background-image: url('images/bg-pattern-card.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 9rem;
+  border-radius: 0.9375rem;
+  max-width: 21.875rem;
+  padding-block-start: var(--spacing-500);
+  padding-block-end: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+}
+
+.card-heading {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block-start: 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1rem - 0.3125rem);
+}
+
+.card__title {
+  color: var(--navy-950);
+  font: var(--text-1-bold);
+  margin-block-end: var(--spacing-100);
+}
+
+.card__age {
+  color: var(--gray-500);
+  font: var(--text-1);
+  margin-inline-start: var(--spacing-100);
+}
+
+.card__image {
+  border: 5px solid white;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+}
+
+.card__location {
+  color: var(--gray-500);
+  font: var(--text-2);
+  text-align: center;
+  margin-block-end: var(--spacing-300);
+}
+
+hr {
+  background-color: var(--gray-100);
+  border: 0;
+  color: var(--gray-100);
+  height: 0.0625rem;
+  margin-block-start: 0;
+  margin-block-end: var(--spacing-300);
+  margin-inline-start: calc(var(--spacing-300) * -1);
+  margin-inline-end: calc(var(--spacing-300) * -1);
+}
+
+.stats__list {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-700);
+}
+
+.stats__list-item h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats__number {
+  color: var(--navy-950);
+  font: var(--text-1-bold);
+  margin-block-end: var(--spacing-100);
+}
+
+.stats__type {
+  color: var(--gray-500);
+  font: var(--text-3);
+  letter-spacing: 0.09375rem;
+}
+
+.main-footer {
+  font: var(--text-2);
+  margin-inline: var(--spacing-300);
+  text-align: center;
+}
+
+.main-footer a:hover,
+.main-footer a:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: 48rem) {
+  .multi-bg {
+    background-position:
+      top -34rem right 24rem,
+      top 21rem left 25rem;
+    background-size:
+      61.125rem 61rem,
+      61.125rem 61rem;
+  }
+
+  .card {
+    padding-inline: var(--spacing-600);
+  }
+
+  hr {
+    margin-inline-start: calc(var(--spacing-600) * -1);
+    margin-inline-end: calc(var(--spacing-600) * -1);
+  }
+}
+
+@media (min-width: 90rem) {
+  .multi-bg {
+    background-position:
+      top -34rem right 45rem,
+      top 21rem left 45rem;
+  }
+}

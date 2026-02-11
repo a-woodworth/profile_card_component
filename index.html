@@ -17,49 +17,60 @@
       sizes="32x32"
       href="images/favicon-32x32.png"
     />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
     <title>Frontend Mentor | Profile Card Component</title>
   </head>
-  <body>
+  <body class="container multi-bg">
     <main>
       <h1 class="sr-only">
         Profiles Unlimited | Find Your Next Favorite Influencer
       </h1>
-      <div class="container">
-        <article class="card">
-          <div class="card-heading">
-            <h2 class="card__title">
-              Victor Crest <span class="card__age">26</span>
-            </h2>
-            <p class="card__location">London</p>
-            <img
-              src="images/image-victor.jpg"
-              alt="Victor Crest avatar"
-              class="card__image"
-            />
-          </div>
-          <ul class="stats__list">
-            <li class="stats__list-item">
-              <h3>
-                <span class="stats__number">80K</span
-                ><span class="stats__type">Followers</span>
-              </h3>
-            </li>
-            <li class="stats__list-item">
-              <h3>
-                <span class="stats__number">803K</span
-                ><span class="stats__type">Likes</span>
-              </h3>
-            </li>
-            <li class="stats__list-item">
-              <h3>
-                <span class="stats__number">1.4K</span
-                ><span class="stats__type">Photos</span>
-              </h3>
-            </li>
-          </ul>
-        </article>
-      </div>
+      <article class="card">
+        <div class="card-heading">
+          <h2 class="card__title">
+            Victor Crest<span class="card__age">26</span>
+          </h2>
+          <img
+            src="images/image-victor.jpg"
+            alt="Victor Crest avatar"
+            class="card__image"
+          />
+        </div>
+        <p class="card__location">London</p>
+        <hr />
+        <ul class="stats__list">
+          <li class="stats__list-item">
+            <h3>
+              <span class="stats__number">80K</span
+              ><span class="stats__type">Followers</span>
+            </h3>
+          </li>
+          <li class="stats__list-item">
+            <h3>
+              <span class="stats__number">803K</span
+              ><span class="stats__type">Likes</span>
+            </h3>
+          </li>
+          <li class="stats__list-item">
+            <h3>
+              <span class="stats__number">1.4K</span
+              ><span class="stats__type">Photos</span>
+            </h3>
+          </li>
+        </ul>
+      </article>
     </main>
     <footer class="main-footer">
       <p>
