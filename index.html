@@ -1,35 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="a-woodworth's live version of Frontend Mentor's Profile Card Component Challenge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
-
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Profile Card Component</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">
+        Profiles Unlimited | Find Your Next Favorite Influencer
+      </h1>
+      <div class="container">
+        <article class="card">
+          <div class="card-heading">
+            <h2 class="card__title">
+              Victor Crest <span class="card__age">26</span>
+            </h2>
+            <p class="card__location">London</p>
+            <img
+              src="images/image-victor.jpg"
+              alt="Victor Crest avatar"
+              class="card__image"
+            />
+          </div>
+          <ul class="stats__list">
+            <li class="stats__list-item">
+              <h3>
+                <span class="stats__number">80K</span
+                ><span class="stats__type">Followers</span>
+              </h3>
+            </li>
+            <li class="stats__list-item">
+              <h3>
+                <span class="stats__number">803K</span
+                ><span class="stats__type">Likes</span>
+              </h3>
+            </li>
+            <li class="stats__list-item">
+              <h3>
+                <span class="stats__number">1.4K</span
+                ><span class="stats__type">Photos</span>
+              </h3>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/a-woodworth">a-woodworth</a>.
+      </p>
+    </footer>
+  </body>
 </html>
