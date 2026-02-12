@@ -6,9 +6,32 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+  - [Built with](#built-with)
 
 ## Overview
 
 ### The challenge
 
 - Build out the project to the designs provided
+
+### Screenshots
+
+**Desktop**
+
+![Desktop Sceenshot](screenshots/desktop-screenshot-1440px.png)
+
+**Mobile**
+
+![Mobile Sceenshot](screenshots/mobile-screenshot-375px.png)
+
+### Links
+
+- Solution URL: [Solution]()
+- Live Site URL: [Live Site](https://a-woodworth.github.io/profile_card_component)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS Custom properties (variables)

@@ -114,7 +114,7 @@ main {
   background-image: url(images/bg-pattern-top.svg);
   background-size: cover;
   position: absolute;
-  top: -32rem;
+  top: -29rem;
   right: 10rem;
   width: 38.875rem;
   height: 38.8125rem;
@@ -229,7 +229,7 @@ hr {
 
   .card::before {
     top: -42rem;
-    right: 13rem;
+    right: 11rem;
   }
 
   .card::after {
@@ -249,7 +249,10 @@ hr {
 
 @media (min-width: 90rem) {
   .card::before {
-    top: -43rem;
-    right: 14rem;
+    right: 13rem;
+  }
+
+  .card::after {
+    left: 9rem;
   }
 }
