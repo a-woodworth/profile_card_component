@@ -103,6 +103,7 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 0.9375rem;
+  box-shadow: 0 50px 100px -20px rgba(8, 70, 94, 0.25);
   max-width: 21.875rem;
   padding-block-start: var(--spacing-500);
   padding-block-end: var(--spacing-300);
@@ -157,8 +158,8 @@ main {
 .card__image {
   border: 5px solid white;
   border-radius: 50%;
-  height: 96px;
-  width: 96px;
+  height: 6rem;
+  width: 6rem;
 }
 
 .card__location {

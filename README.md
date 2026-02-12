@@ -28,7 +28,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/profile-card-component---bem-css-custom-properties-gKgkNawGgH)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/profile_card_component)
 
 ### Built with
