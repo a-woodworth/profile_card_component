@@ -86,7 +86,6 @@ body {
 
 main {
   margin: auto;
-  padding-inline: var(--spacing-300);
   position: relative;
 }
 
