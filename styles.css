@@ -78,27 +78,15 @@ a {
 }
 
 body {
+  background-color: var(--blue-600);
   font-family: var(--font-base);
   min-height: 100vh;
-}
-
-.multi-bg {
-  background-color: var(--blue-600);
-  background-image:
-    url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
-  background-position:
-    top -20rem right 10rem,
-    top 24rem left 10rem;
-  background-repeat: no-repeat, no-repeat;
-  background-size:
-    38.875rem 38.8125rem,
-    38.875rem 38.8125rem;
-  overflow: hidden;
 }
 
 main {
   margin: auto;
   padding-inline: var(--spacing-300);
+  position: relative;
 }
 
 .container {
@@ -106,13 +94,14 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: auto 3rem;
   margin: auto;
+  overflow: hidden;
 }
 
 .card {
   background-color: var(--white);
   background-image: url('images/bg-pattern-card.svg');
   background-repeat: no-repeat;
-  background-size: 100% 9rem;
+  background-size: contain;
   border-radius: 0.9375rem;
   max-width: 21.875rem;
   padding-block-start: var(--spacing-500);
@@ -120,10 +109,35 @@ main {
   padding-inline: var(--spacing-300);
 }
 
+.card::before {
+  content: '';
+  background-image: url(images/bg-pattern-top.svg);
+  background-size: cover;
+  position: absolute;
+  top: -32rem;
+  right: 10rem;
+  width: 38.875rem;
+  height: 38.8125rem;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  background-image: url(images/bg-pattern-bottom.svg);
+  background-size: cover;
+  position: absolute;
+  top: 10rem;
+  left: 9rem;
+  width: 38.875rem;
+  height: 38.8125rem;
+  z-index: -1;
+}
+
 .card-heading {
   display: flex;
   flex-direction: column-reverse;
-  padding-block-start: 4rem;
+  padding-block-start: 2.5rem;
   justify-content: center;
   align-items: center;
   gap: calc(1rem - 0.3125rem);
@@ -204,17 +218,28 @@ hr {
 }
 
 @media (min-width: 48rem) {
-  .multi-bg {
-    background-position:
-      top -34rem right 24rem,
-      top 21rem left 25rem;
-    background-size:
-      61.125rem 61rem,
-      61.125rem 61rem;
-  }
-
   .card {
     padding-inline: var(--spacing-600);
+  }
+
+  .card::before,
+  .card::after {
+    height: 61rem;
+    width: 61.125rem;
+  }
+
+  .card::before {
+    top: -42rem;
+    right: 13rem;
+  }
+
+  .card::after {
+    top: 12rem;
+    left: 12rem;
+  }
+
+  .card-heading {
+    padding-block-start: 3.75rem;
   }
 
   hr {
@@ -224,9 +249,8 @@ hr {
 }
 
 @media (min-width: 90rem) {
-  .multi-bg {
-    background-position:
-      top -34rem right 45rem,
-      top 21rem left 45rem;
+  .card::before {
+    top: -43rem;
+    right: 14rem;
   }
 }
